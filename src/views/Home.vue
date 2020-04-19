@@ -1,18 +1,36 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <div class="main">
+      <el-tabs v-model="activeTab">
+        <el-tab-pane label="cooool" name="first">
+          <img alt="Vue logo" src="../assets/zrn.jpeg" />
+          <hello-world msg="yzfCoolFun" />
+        </el-tab-pane>
+        <el-tab-pane label="theZingzing" name="second">theZingzing</el-tab-pane>
+        <el-tab-pane label="Kyomika" name="third">Kyomika</el-tab-pane>
+        <el-tab-pane label="jacket" name="fourth">jacket</el-tab-pane>
+      </el-tabs>
+    </div>
   </div>
 </template>
 
-<script>
+<script lang="ts">
 // @ is an alias to /src
+import { Component, Vue } from "vue-property-decorator";
 import HelloWorld from "@/components/HelloWorld.vue";
 
-export default {
-  name: "Home",
+@Component({
   components: {
-    HelloWorld
+    "hello-world": HelloWorld
   }
-};
+})
+export default class VeloSearch extends Vue {
+  protected activeTab = "first";
+}
 </script>
+
+<style scoped>
+.main {
+  z-index: 90;
+}
+</style>
