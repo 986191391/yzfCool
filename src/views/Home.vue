@@ -1,27 +1,19 @@
 <template>
-  <div class="home">
-    <div class="main">
-      <el-tabs v-model="activeTab">
-        <el-tab-pane label="cooool" name="first">
-          <img alt="Vue logo" src="../assets/zrn.jpeg" />
-          <hello-world msg="yzfCoolFun" />
-        </el-tab-pane>
-        <el-tab-pane label="theZingzing" name="second">theZingzing</el-tab-pane>
-        <el-tab-pane label="Kyomika" name="third">Kyomika</el-tab-pane>
-        <el-tab-pane label="jacket" name="fourth">jacket</el-tab-pane>
-      </el-tabs>
-    </div>
+  <div class="main">
+      <div class="main-body">
+        <img class="main-logo" src="../assets/zrn.jpeg" />
+        <home-page-introduct msg="yzfCoolFun" />
+      </div>
   </div>
 </template>
 
 <script lang="ts">
-// @ is an alias to /src
 import { Component, Vue } from "vue-property-decorator";
-import HelloWorld from "@/components/HelloWorld.vue";
+import HomePageIntroduct from "@/components/HomePageIntroduct.vue";
 
 @Component({
   components: {
-    "hello-world": HelloWorld
+    "home-page-introduct": HomePageIntroduct
   }
 })
 export default class VeloSearch extends Vue {
@@ -29,8 +21,32 @@ export default class VeloSearch extends Vue {
 }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .main {
-  z-index: 90;
+  height: 100%;
+  display: flex;
+  flex: 1;
+  overflow: auto;
+
+    .main-body {
+      display: flex;
+      align-items: center;
+      flex: 1 1 auto;
+      overflow: auto;
+      flex-direction: column;
+      padding: 30px 200px 0 200px;
+
+      .main-logo {
+        width: 800px; 
+        height: 496px;
+      }
+    }
+  // }
+
 }
 </style>

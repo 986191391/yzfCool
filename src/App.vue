@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <div class="showWindow" :class="showNumber<0 ? 'hideWindow':''">{{showFontData[showNumber]}}</div>
+    <main-header />
     <!-- <div class="main"> -->
     <!-- <ul class="nav">
         <li>
@@ -23,8 +24,13 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
+import Header from "@/components/header/header.vue";
 
-@Component({})
+@Component({
+  components: {
+    "main-header": Header
+  }
+})
 export default class VeloSearch extends Vue {
   protected showNumber = 2;
 
@@ -45,41 +51,16 @@ export default class VeloSearch extends Vue {
 </script>
 
 <style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
 * {
   margin: 0;
   padding: 0;
 }
 
-.nav {
-  width: 30%;
-  padding: 30px;
+#app {
+  height: 100vh;
   display: flex;
-  justify-content: space-around;
-  list-style: none;
-  margin: 0 auto;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    text-decoration: none;
-    transition: all 0.5s;
-
-    &:hover {
-      color: #42b983;
-    }
-
-    &.router-link-exact-active {
-      color: green;
-    }
-  }
+  flex-direction: column;
+  text-align: center;
 }
 
 .showWindow {
