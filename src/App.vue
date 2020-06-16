@@ -1,7 +1,11 @@
 <template>
   <div id="app">
-    <div class="showWindow" :class="showNumber<0 ? 'hideWindow':''">{{showFontData[showNumber]}}</div>
+    <div
+      class="showWindow"
+      :class="showNumber < 0 ? 'hideWindow' : ''"
+    >{{ showFontData[showNumber] }}</div>
     <main-header />
+    <!-- <main-content /> -->
     <!-- <div class="main"> -->
     <!-- <ul class="nav">
         <li>
@@ -17,18 +21,24 @@
           <router-link to="/jacket">jacket</router-link>
         </li>
     </ul>-->
-    <router-view />
-    <!-- </div> -->
+    <div class="main-content">
+      <div class="content">
+        <router-view />
+        <main-footer />
+      </div>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import Header from "@/components/header/header.vue";
+import Footer from "@/components/footer/footer.vue";
 
 @Component({
   components: {
-    "main-header": Header
+    "main-header": Header,
+    "main-footer": Footer
   }
 })
 export default class VeloSearch extends Vue {
@@ -54,6 +64,7 @@ export default class VeloSearch extends Vue {
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 #app {
@@ -87,5 +98,18 @@ export default class VeloSearch extends Vue {
   opacity: 0;
   z-index: 80;
   visibility: hidden;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: auto;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 </style>

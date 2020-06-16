@@ -1,9 +1,7 @@
 <template>
   <div class="main">
-      <div class="main-body">
-        <img class="main-logo" src="../assets/zrn.jpeg" />
-        <home-page-introduct msg="yzfCoolFun" />
-      </div>
+    <img class="main-logo" src="../assets/zrn.jpeg" />
+    <home-page-introduct msg="yzfCoolFun" />
   </div>
 </template>
 
@@ -22,31 +20,13 @@ export default class VeloSearch extends Vue {
 </script>
 
 <style lang="less" scoped>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 .main {
-  height: 100%;
+  width: 80%;
+  max-width: 1200px;
   display: flex;
-  flex: 1;
-  overflow: auto;
-
-    .main-body {
-      display: flex;
-      align-items: center;
-      flex: 1 1 auto;
-      overflow: auto;
-      flex-direction: column;
-      padding: 30px 200px 0 200px;
-
-      .main-logo {
-        width: 800px; 
-        height: 496px;
-      }
-    }
-  // }
-
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 0;
 }
 </style>
