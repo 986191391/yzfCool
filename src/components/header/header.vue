@@ -1,14 +1,20 @@
 <template>
   <div class="header">
     <div class="header-main">
-        <div class="header-left">
-            yzfCoolFun
-        </div>
-        <ul class="nav">
-            <li class="nav-item">My Component</li>
-            <li class="nav-item">My Article</li>
-            <li class="nav-item">About Me</li>
-        </ul>
+      <div class="header-left" @click="goDefault">
+        yzfCoolFun
+      </div>
+      <ul class="nav">
+        <li class="nav-item">
+          <router-link to="/Component">Component</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/Article">Article</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/AboutMe">AboutMe</router-link>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -20,14 +26,18 @@ import { Component, Vue } from "vue-property-decorator";
   name: "header",
   components: {}
 })
-export default class Header extends Vue {}
+export default class Header extends Vue {
+  private goDefault() {
+    this.$router.push('/');
+  }
+}
 </script>
 
 <style lang="less" scoped>
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .header {
@@ -46,26 +56,32 @@ export default class Header extends Vue {}
     border-bottom: 1px solid #ddd;
 
     .header-left {
-        font-size: 20px;
-        font-weight: bold;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
     }
 
     .nav {
-        width: 50%;
-        display: flex;
-        justify-content: flex-end;
-        list-style: none;
+      width: 40%;
+      display: flex;
+      justify-content: flex-end;
+      list-style: none;
 
-        .nav-item {
-            width: 25%;
-            color: #888;
-            text-align: center;
-            cursor: pointer;
+      .nav-item {
+        width: 25%;
+        color: #888;
+        text-align: center;
+        cursor: pointer;
 
-            &:hover {
-                color: #000;
-            }
+        a {
+          text-decoration: none;
+          color: #888;
+
+          &:hover {
+            color: #000;
+          }
         }
+      }
     }
   }
 }

@@ -1,6 +1,6 @@
 <template>
-  <div class="main">
-    <img class="main-logo" src="../assets/zrn.jpeg" />
+  <div class="home">
+    <img src="../assets/zrn.jpeg" />
     <home-page-introduct msg="yzfCoolFun" />
   </div>
 </template>
@@ -10,19 +10,19 @@ import { Component, Vue } from "vue-property-decorator";
 import HomePageIntroduct from "@/components/HomePageIntroduct.vue";
 
 @Component({
+  name: 'home',
   components: {
     "home-page-introduct": HomePageIntroduct
   }
 })
-export default class VeloSearch extends Vue {
+export default class Home extends Vue {
   protected activeTab = "first";
 }
 </script>
 
 <style lang="less" scoped>
-.main {
-  width: 80%;
-  max-width: 1200px;
+.home {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

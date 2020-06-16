@@ -13,13 +13,13 @@
         <img src="../assets/component.png" class="item-img" />
         <h3 class="item-title">组件</h3>
         <div class="item-content">我将会在此记录我在工作过程中参与制作过的组件，或是自己无聊开发的个人新鲜玩意，欢迎大家评论吐槽哈</div>
-        <div class="item-more">查看详情</div>
+        <div class="item-more" @click="goComponent">查看详情</div>
       </li>
       <li class="item">
         <img src="../assets/article.png" class="item-img" />
         <h3 class="item-title">文章</h3>
         <div class="item-content">遇到问题总结回顾记录是一个程序员必备的技能，温故知新，这样才能推动着自己往前进步，欢迎大家阅览</div>
-        <div class="item-more">查看详情</div>
+        <div class="item-more" @click="goArticle">查看详情</div>
       </li>
     </ul>
   </div>
@@ -31,6 +31,14 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 @Component
 export default class HelloWorld extends Vue {
   @Prop() private msg!: string;
+
+  private goComponent() {
+    this.$router.push('Component');
+  }
+
+  private goArticle() {
+    this.$router.push('Article');
+  }
 }
 </script>
 
@@ -38,7 +46,7 @@ export default class HelloWorld extends Vue {
 <style scoped lang="less">
 .introduction {
   width: 80%;
-  max-width: 800px;
+  min-width: 800px;
   margin-top: 20px;
   font-size: 15px;
   padding: 20px 0;
@@ -58,7 +66,7 @@ export default class HelloWorld extends Vue {
 
   .record-study {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     list-style: none;
     margin-top: 100px;
 

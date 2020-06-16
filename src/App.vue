@@ -110,6 +110,8 @@ export default class VeloSearch extends Vue {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex: 1;
+    overflow: auto;
   }
 }
 </style>
