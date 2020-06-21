@@ -1,7 +1,7 @@
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
 import Home from "../views/Home.vue";
-import Component from "../components/myComponent/myComponent.vue";
+import Participate from "../views/myParticipate/myParticipate.vue";
 import Article from "../components/article/article.vue";
 import AboutMe from "../components/aboutMe/aboutMe.vue";
 
@@ -13,9 +13,9 @@ const routes: Array<RouteConfig> = [
     name: "Home",
     component: Home
   },{
-    path: "/component",
-    name: "Component",
-    component: Component
+    path: "/participate",
+    name: "Participate",
+    component: Participate
   },{
     path: "/article",
     name: "Article",

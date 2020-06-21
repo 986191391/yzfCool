@@ -2,17 +2,20 @@
   <div class="home">
     <img src="../assets/zrn.jpeg" />
     <home-page-introduct msg="yzfCoolFun" />
+    <yzf-cool-footer />
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import HomePageIntroduct from "@/components/HomePageIntroduct.vue";
+import YzfCoolFooter from "@/components/footer/footer.vue";
 
 @Component({
   name: 'home',
   components: {
-    "home-page-introduct": HomePageIntroduct
+    "home-page-introduct": HomePageIntroduct,
+    "yzf-cool-footer": YzfCoolFooter
   }
 })
 export default class Home extends Vue {
@@ -27,6 +30,6 @@ export default class Home extends Vue {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 50px 0;
+  padding-top: 50px;
 }
 </style>

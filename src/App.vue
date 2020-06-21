@@ -22,10 +22,7 @@
         </li>
     </ul>-->
     <div class="main-content">
-      <div class="content">
         <router-view />
-        <main-footer />
-      </div>
     </div>
   </div>
 </template>
@@ -33,12 +30,10 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import Header from "@/components/header/header.vue";
-import Footer from "@/components/footer/footer.vue";
 
 @Component({
   components: {
     "main-header": Header,
-    "main-footer": Footer
   }
 })
 export default class VeloSearch extends Vue {
@@ -106,12 +101,5 @@ export default class VeloSearch extends Vue {
   flex: 1;
   overflow: auto;
 
-  .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1;
-    overflow: auto;
-  }
 }
 </style>
