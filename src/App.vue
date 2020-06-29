@@ -62,6 +62,10 @@ export default class VeloSearch extends Vue {
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 #app {
   height: 100vh;
   display: flex;

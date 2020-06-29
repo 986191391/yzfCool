@@ -3,19 +3,16 @@
     <div class="nav">
       <ul>
         <li class="nav-li-title">我参与的</li>
-        <li>介绍</li>
+        <router-link to="/participate/introduction">介绍</router-link>
         <li class="nav-li-title">组件</li>
-        <li>input输入框</li>
-        <li>select选择框</li>
-        <li>search搜索框</li>
-        <li>input输入框</li>
-        <li>select选择框</li>
-        <li>search搜索框</li>
-        <li>input输入框</li>
-        <li>select选择框</li>
-        <li>search搜索框</li>
-        <li>input输入框</li>
-        <li>select选择框</li>
+        <router-link to="/participate/yzfInput">Input输入框</router-link>
+        <router-link to="/participate/yzfInput">Select选择框</router-link>
+        <router-link to="/participate/yzfInput">Search搜索框</router-link>
+        <router-link to="/participate/yzfInput">input输入框</router-link>
+        <router-link to="/participate/yzfInput">input输入框</router-link>
+        <router-link to="/participate/yzfInput">input输入框</router-link>
+        <router-link to="/participate/yzfInput">input输入框</router-link>
+        <router-link to="/participate/yzfInput">input输入框</router-link>
         <li class="nav-li-title">小程序</li>
         <li>search搜索框</li>
         <li>input输入框</li>
@@ -29,7 +26,9 @@
         <li>search搜索框</li>
       </ul>
     </div>
-    <div class="content"></div>
+    <div class="content">
+      <router-view />
+    </div>
   </div>
 </template>
 
@@ -40,7 +39,25 @@ import { Component, Vue } from "vue-property-decorator";
   name: "myParticipate",
   components: {}
 })
-export default class MyParticipate extends Vue {}
+export default class MyParticipate extends Vue {
+  private goIntroduction() {
+    // console.log('this.$route.params', this.$route.params)
+    // this.$router.push({
+    //   name: "Participate",
+    //   params: {
+    //     ...this.$route.params,
+    //     fileId: "Introduction"
+    //   }
+    // });
+    this.$router.push({ name: "Introduction" })
+    // this.$router.push("/Participate/Introduction");
+  }
+
+  private goYzfInput() {
+    this.$router.push({ name: "YzfInput" })
+    
+  }
+}
 </script>
 
 <style lang="less" scoped>
@@ -51,28 +68,34 @@ export default class MyParticipate extends Vue {}
 
   .nav {
     width: 240px;
+    min-width: 240px;
     height: 100%;
+    line-height: 40px;
     overflow-x: auto;
     overflow: scroll;
     display: flex;
     flex-direction: column;
 
     ul {
+      display: flex;
+      flex-direction: column;
       list-style: none;
-      padding: 20px 20px 0;
+      text-align: left;
+      padding: 20px;
 
       .nav-li-title {
         font-size: 16px;
         color: #333;
         font-weight: 700;
         margin-top: 15px;
+        user-select: none;
         &:hover {
           color: #333;
         }
       }
 
-      li {
-        line-height: 40px;
+      a {
+        line-height: 38px;
         text-align: left;
         color: #444;
         font-size: 14px;
@@ -83,11 +106,20 @@ export default class MyParticipate extends Vue {}
           color: #0366d6;
         }
       }
+
+      .router-link-active {
+        color: #0366d6;
+      }
     }
   }
 
   .content {
     width: 900px;
+    min-width: 900px;
+    display: flex;
+    overflow: auto;
+    height: 100%;
+    padding: 50px 30px 0;
   }
 }
 </style>

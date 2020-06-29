@@ -13,7 +13,7 @@
         <img src="../assets/component.png" class="item-img" />
         <h3 class="item-title">组件</h3>
         <div class="item-content">我将会在此记录我在工作过程中参与制作过的组件，或是自己无聊开发的个人新鲜玩意，欢迎大家评论吐槽哈</div>
-        <div class="item-more" @click="goComponent">查看详情</div>
+        <div class="item-more" @click="goParticipate">查看详情</div>
       </li>
       <li class="item">
         <img src="../assets/article.png" class="item-img" />
@@ -32,8 +32,8 @@ import { Component, Prop, Vue } from "vue-property-decorator";
 export default class HelloWorld extends Vue {
   @Prop() private msg!: string;
 
-  private goComponent() {
-    this.$router.push('Component');
+  private goParticipate() {
+    this.$router.push('/participate/introduction');
   }
 
   private goArticle() {
