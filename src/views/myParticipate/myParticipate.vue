@@ -6,13 +6,8 @@
         <router-link to="/participate/introduction">介绍</router-link>
         <li class="nav-li-title">组件</li>
         <router-link to="/participate/yzfInput">Input输入框</router-link>
-        <router-link to="/participate/yzfInput">Select选择框</router-link>
-        <router-link to="/participate/yzfInput">Search搜索框</router-link>
-        <router-link to="/participate/yzfInput">input输入框</router-link>
-        <router-link to="/participate/yzfInput">input输入框</router-link>
-        <router-link to="/participate/yzfInput">input输入框</router-link>
-        <router-link to="/participate/yzfInput">input输入框</router-link>
-        <router-link to="/participate/yzfInput">input输入框</router-link>
+        <router-link to="/participate/yzfSelect">Select选择框</router-link>
+        <router-link to="/participate/yzfSearch">Search搜索框</router-link>
         <li class="nav-li-title">小程序</li>
         <li>search搜索框</li>
         <li>input输入框</li>
@@ -41,16 +36,7 @@ import { Component, Vue } from "vue-property-decorator";
 })
 export default class MyParticipate extends Vue {
   private goIntroduction() {
-    // console.log('this.$route.params', this.$route.params)
-    // this.$router.push({
-    //   name: "Participate",
-    //   params: {
-    //     ...this.$route.params,
-    //     fileId: "Introduction"
-    //   }
-    // });
     this.$router.push({ name: "Introduction" })
-    // this.$router.push("/Participate/Introduction");
   }
 
   private goYzfInput() {
@@ -65,6 +51,7 @@ export default class MyParticipate extends Vue {
   height: 100%;
   display: flex;
   justify-content: center;
+  padding-bottom: 30px;
 
   .nav {
     width: 240px;

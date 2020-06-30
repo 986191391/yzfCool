@@ -28,43 +28,10 @@
       参与开发过的小程序主要的运行平台是在微信，微信小程序方面是需要安装微信开发者工具<br>
       下载并安装工具可以参考<a class="elem-link" target="_blank" href="https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html">https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html</a>
     </div>
-    introduction <br>
-    introduction <br>
-    introduction <br>
-    introduction <br>
-    introduction <br>
-    introduction <br>
-    introduction <br>
-    introduction <br>
-    introduction <br>
-    introduction <br>
-    introduction <br>
-    introduction <br>
-    introduction <br>
-    introduction <br>
-    introduction <br>
-    introduction <br>
-    introduction <br>
-    introduction <br>
-    introduction <br>
-    introduction <br>
-    introduction <br>
-    introduction <br>
-    introduction <br>
-    introduction <br>
-    introduction <br>
-    introduction <br>
-    introduction <br>
-    introduction <br>
-    introduction <br>
-    introduction <br>
-    introduction <br>
-    introduction <br>
-    introduction <br>
-    introduction <br>
-    introduction <br>
-    introduction <br>
-    introduction <br>
+    <div class="footer-nav">
+      <span></span>
+      <router-link to="/participate/yzfInput">Input输入框 ></router-link>
+    </div>
   </div>
 </template>
 
@@ -76,6 +43,9 @@ import { Component, Vue } from "vue-property-decorator";
   components: {}
 })
 export default class Introduction extends Vue {
+  private goInput() {
+    this.$router.push('/participate/yzfInput');
+  }
 }
 </script>
 
@@ -123,12 +93,28 @@ export default class Introduction extends Vue {
     }
 
     .elem-link {
-      color: ;
     }
 
     code {
       color: #abb2bf;
       background: #282c34;
+    }
+
+    .footer-nav {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      cursor: pointer;
+      margin: 30px 0;
+
+      a {
+        color: #333;
+        &:hover {
+          color: #0366d6;
+        }
+      }
+
     }
   }
 </style>

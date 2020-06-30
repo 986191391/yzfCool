@@ -6,6 +6,9 @@ import Article from "../views/article/article.vue";
 import AboutMe from "../views/aboutMe/aboutMe.vue";
 import Introduction from "../components/myComponents/introduction.vue";
 import YzfInput from "../components/myComponents/yzfInput.vue";
+import YzfSelect from "../components/myComponents/yzfSelect.vue";
+import YzfSearch from "../components/myComponents/yzfSearch.vue";
+
 
 Vue.use(VueRouter);
 
@@ -29,6 +32,16 @@ const routes: Array<RouteConfig> = [
         path: "/participate/yzfInput",
         name: "YzfInput",
         component: YzfInput
+      },
+      {
+        path: "/participate/yzfSelect",
+        name: "YzfSelect",
+        component: YzfSelect
+      },
+      {
+        path: "/participate/yzfSearch",
+        name: "YzfSearch",
+        component: YzfSearch
       }
     ]
   },{
