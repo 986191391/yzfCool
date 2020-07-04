@@ -9,15 +9,15 @@ import YzfInput from "../components/myComponents/yzfInput.vue";
 import YzfSelect from "../components/myComponents/yzfSelect.vue";
 import YzfSearch from "../components/myComponents/yzfSearch.vue";
 
-
 Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
   {
     path: "/",
     name: "Home",
-    component: Home
-  },{
+    component: Home,
+  },
+  {
     path: "/participate",
     name: "Participate",
     component: Participate,
@@ -26,39 +26,42 @@ const routes: Array<RouteConfig> = [
       {
         path: "/participate/introduction",
         name: "Introduction",
-        component: Introduction
+        component: Introduction,
       },
       {
         path: "/participate/yzfInput",
         name: "YzfInput",
-        component: YzfInput
+        component: YzfInput,
       },
       {
         path: "/participate/yzfSelect",
         name: "YzfSelect",
-        component: YzfSelect
+        component: YzfSelect,
       },
       {
         path: "/participate/yzfSearch",
         name: "YzfSearch",
-        component: YzfSearch
-      }
-    ]
-  },{
+        component: YzfSearch,
+      },
+    ],
+  },
+  {
     path: "/article",
     name: "Article",
-    component: Article
-  },{
+    component: Article,
+  },
+  {
     path: "/aboutme",
     name: "AboutMe",
-    component: AboutMe
-  }
+    component: AboutMe,
+  },
 ];
 
 const router = new VueRouter({
   mode: "history",
-  base: process.env.BASE_URL,
-  routes
+  base:
+    process.env.NODE_ENV === "production" ? "/yzfCoo" : process.env.BASE_URL,
+  routes,
 });
 
 export default router;
