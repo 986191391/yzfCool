@@ -125,7 +125,7 @@ a {
   color: #42b983;
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 720px) {
   .introduction {
     width: 100%;
     min-width: 100%;
@@ -136,6 +136,7 @@ a {
       align-items: center;
 
       .item {
+        height: auto;
         margin-bottom: 40px;
 
         .item-more {

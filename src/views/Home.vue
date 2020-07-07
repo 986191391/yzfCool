@@ -41,7 +41,7 @@ export default class Home extends Vue {
   }
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 720px) {
   .home {
     .home-img {
       height: 200px;

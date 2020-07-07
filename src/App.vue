@@ -4,25 +4,9 @@
       class="showWindow"
       :class="showNumber < 0 ? 'hideWindow' : ''"
     >{{ showFontData[showNumber] }}</div>
-    <main-header />
-    <!-- <main-content /> -->
-    <!-- <div class="main"> -->
-    <!-- <ul class="nav">
-        <li>
-          <router-link to="/">Cooool</router-link>
-        </li>
-        <li>
-          <router-link to="/zing">theZingzing</router-link>
-        </li>
-        <li>
-          <router-link to="/kyomika">Kyomika</router-link>
-        </li>
-        <li>
-          <router-link to="/jacket">jacket</router-link>
-        </li>
-    </ul>-->
+    <yzf-header />
     <div class="main-content">
-        <router-view />
+      <router-view />
     </div>
   </div>
 </template>
@@ -33,7 +17,7 @@ import Header from "@/components/header/header.vue";
 
 @Component({
   components: {
-    "main-header": Header,
+    "yzf-header": Header,
   }
 })
 export default class VeloSearch extends Vue {
@@ -60,6 +44,7 @@ export default class VeloSearch extends Vue {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: PingFangSC-Regular,PingFang SC;
 }
 
 a {
@@ -108,7 +93,11 @@ a {
 }
 
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 720px) {
+  #app {
+    height: 100%;
+  }
+
   .showWindow {
     font-size: 48px;
   }

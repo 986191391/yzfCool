@@ -102,7 +102,7 @@ export default class MyParticipate extends Vue {
   }
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 720px) {
   
 }
 </style>

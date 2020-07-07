@@ -15,7 +15,14 @@
           <router-link to="/AboutMe">AboutMe</router-link>
         </li>
       </ul>
-      <span class="phone-adapter">=</span>
+      <span class="phone-adapter" @click="showDropdown">=</span>
+      <div class="phone-dropdown" :class="isShowDropdown && 'showDropdown'">
+        <ul class="nav-dropdown">
+          <li class="nav-dropdown-item" @click="go('/participate/introduction')">Participate</li>
+          <li class="nav-dropdown-item" @click="go('/Article')">Article</li>
+          <li class="nav-dropdown-item" @click="go('/AboutMe')">AboutMe</li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -30,6 +37,18 @@ import { Component, Vue } from "vue-property-decorator";
 export default class Header extends Vue {
   private goDefault() {
     this.$router.push('/');
+  }
+
+  private isShowDropdown = false;
+
+  private showDropdown() {
+    this.isShowDropdown = this.isShowDropdown ? false : true;
+    console.log('hi', this.isShowDropdown);
+  }
+
+  private go(path: string) {
+    this.$router.push(path);
+    this.isShowDropdown = false;
   }
 }
 </script>
@@ -85,12 +104,43 @@ export default class Header extends Vue {
     }
 
     .phone-adapter {
+      width: 30px;
+      height: 30px;
+      font-size: 24px;
+      line-height: 24px;
       display: none;
+    }
+
+    .phone-dropdown {
+      display: none;
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      top: 80px;
+      left: 0px;
+      background-color: #f2f2f2;
+
+      .nav-dropdown {
+        width: 100%;
+        padding: 30px;
+        list-style: none;
+        text-align: left;
+
+        .nav-dropdown-item {
+          height: 50px;
+          line-height: 50px;
+          border-bottom: 1px solid #ccc;
+        }
+      }
     }
   }
 }
 
-@media screen and (max-width: 1080px) {
+.showDropdown {
+  display: flex !important;
+}
+
+@media screen and (max-width: 720px) {
   .header {
     .header-main {
       min-width: 100%;
@@ -104,6 +154,7 @@ export default class Header extends Vue {
       .phone-adapter {
         display: block;
       }
+      
     }
   }
 }

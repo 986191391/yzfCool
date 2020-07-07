@@ -62,7 +62,7 @@ export default class Footer extends Vue {}
   }
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 720px) {
   .footer {
     height: auto;
     flex-direction: column;
