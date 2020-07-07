@@ -104,6 +104,13 @@ a {
   flex-direction: column;
   flex: 1;
   overflow: auto;
+  align-items: center;
+}
 
+
+@media screen and (max-width: 1080px) {
+  .showWindow {
+    font-size: 48px;
+  }
 }
 </style>

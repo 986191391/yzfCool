@@ -61,4 +61,18 @@ export default class Footer extends Vue {}
     font-size: 14px;
   }
 }
+
+@media screen and (max-width: 1080px) {
+  .footer {
+    height: auto;
+    flex-direction: column;
+    padding-bottom: 40px;
+
+    .left, .right {
+      width: 100%;
+      padding: 0 30px;
+      margin-top: 30px;
+    }
+  }
+}
 </style>

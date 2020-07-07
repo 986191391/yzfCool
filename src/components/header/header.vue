@@ -15,6 +15,7 @@
           <router-link to="/AboutMe">AboutMe</router-link>
         </li>
       </ul>
+      <span class="phone-adapter">=</span>
     </div>
   </div>
 </template>
@@ -44,7 +45,6 @@ export default class Header extends Vue {
   display: flex;
   justify-content: center;
   height: 80px;
-//   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
 
   .header-main {
     min-width: 1140px;
@@ -81,6 +81,28 @@ export default class Header extends Vue {
             color: #000;
           }
         }
+      }
+    }
+
+    .phone-adapter {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .header {
+    .header-main {
+      min-width: 100%;
+      width: 100%;
+      padding: 0 20px;
+
+      .nav {
+        display: none;
+      }
+
+      .phone-adapter {
+        display: block;
       }
     }
   }

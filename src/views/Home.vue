@@ -1,6 +1,7 @@
 <template>
   <div class="home">
-    <img src="../assets/zrn.jpeg" />
+    <div class="home-img"></div>
+    <!-- <img src="../assets/zrn.jpeg" /> -->
     <home-page-introduct msg="yzfCoolFun" />
     <yzf-cool-footer />
   </div>
@@ -31,5 +32,23 @@ export default class Home extends Vue {
   align-items: center;
   flex-direction: column;
   padding-top: 50px;
+
+  .home-img {
+    height: 496px;
+    width: 800px;
+    background: url('../assets/zrn.jpeg') no-repeat center;
+    background-size: contain;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .home {
+    .home-img {
+      height: 200px;
+      width: 100%;
+      background: url('../assets/zrn.jpeg') no-repeat center;
+      background-size: contain;
+    }
+  }
 }
 </style>

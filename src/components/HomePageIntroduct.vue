@@ -124,4 +124,30 @@ export default class HelloWorld extends Vue {
 a {
   color: #42b983;
 }
+
+@media screen and (max-width: 1080px) {
+  .introduction {
+    width: 100%;
+    min-width: 100%;
+
+    .record-study {
+      margin-top: 50px;
+      flex-direction: column;
+      align-items: center;
+
+      .item {
+        margin-bottom: 40px;
+
+        .item-more {
+          margin-top: 0px;
+          height: 33px;
+          border-top: 1px solid #ccc;
+          color: #fff;
+          background-color: #99a9bf;
+        }
+      }
+    }
+  }
+}
+
 </style>

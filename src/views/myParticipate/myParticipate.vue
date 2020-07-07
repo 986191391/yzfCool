@@ -9,16 +9,7 @@
         <router-link to="/participate/yzfSelect">Select选择框</router-link>
         <router-link to="/participate/yzfSearch">Search搜索框</router-link>
         <li class="nav-li-title">小程序</li>
-        <li>search搜索框</li>
-        <li>input输入框</li>
-        <li>select选择框</li>
-        <li>search搜索框</li>
-        <li>input输入框</li>
-        <li>select选择框</li>
-        <li>search搜索框</li>
-        <li>input输入框</li>
-        <li>select选择框</li>
-        <li>search搜索框</li>
+        <li>等待编写</li>
       </ul>
     </div>
     <div class="content">
@@ -49,12 +40,13 @@ export default class MyParticipate extends Vue {
 <style lang="less" scoped>
 .my-participate {
   height: 100%;
+  width: 70%;
   display: flex;
   justify-content: center;
   padding-bottom: 30px;
 
   .nav {
-    width: 240px;
+    width: 15%;
     min-width: 240px;
     height: 100%;
     line-height: 40px;
@@ -101,12 +93,16 @@ export default class MyParticipate extends Vue {
   }
 
   .content {
-    width: 900px;
+    width: 85%;
     min-width: 900px;
     display: flex;
     overflow: auto;
     height: 100%;
     padding: 50px 30px 0;
   }
+}
+
+@media screen and (max-width: 1080px) {
+  
 }
 </style>
