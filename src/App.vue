@@ -45,10 +45,12 @@ export default class VeloSearch extends Vue {
   padding: 0;
   box-sizing: border-box;
   font-family: PingFangSC-Regular,PingFang SC;
+  
 }
 
 a {
   text-decoration: none;
+  word-wrap:break-word;
 }
 
 #app {

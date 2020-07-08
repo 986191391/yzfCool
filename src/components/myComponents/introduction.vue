@@ -57,6 +57,10 @@ export default class Introduction extends Vue {
     align-items: flex-start;
     text-align: left;
 
+    div {
+      width: 100%;
+    }
+
     .main-title {
       font-weight: 400;
       color: #1f2f3d;

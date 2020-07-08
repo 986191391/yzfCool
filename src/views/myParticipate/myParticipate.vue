@@ -9,7 +9,6 @@
         <router-link to="/participate/yzfSelect">Select选择框</router-link>
         <router-link to="/participate/yzfSearch">Search搜索框</router-link>
         <li class="nav-li-title">小程序</li>
-        <li>等待编写</li>
       </ul>
     </div>
     <div class="content">
@@ -41,6 +40,7 @@ export default class MyParticipate extends Vue {
 .my-participate {
   height: 100%;
   width: 70%;
+  min-width: 1140px;
   display: flex;
   justify-content: center;
   padding-bottom: 30px;
@@ -103,6 +103,25 @@ export default class MyParticipate extends Vue {
 }
 
 @media screen and (max-width: 720px) {
-  
+
+  .my-participate {
+    width: 100%;
+    min-width: 100%;
+    flex-direction: column;
+
+    .nav {
+      width: 100%;
+      
+      ul {
+        padding: 20px 40px;
+      }
+    }
+
+    .content {
+      width: 100%;
+      min-width: 100%;
+      // 这里开始是root-view
+    }
+  }
 }
 </style>
