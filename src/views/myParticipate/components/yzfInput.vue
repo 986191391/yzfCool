@@ -6,15 +6,21 @@
     <div class="description">
       在elementUI的Input组件上进行了一个升级，在不丢失原有功能的前提下新增样式及功能，el-input的所有属性都可以正常的使用。
     </div>
+    <codeDemo :codeHeight="200">
+      hi i like RuoNan Zhang
+    </codeDemo>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
+import codeDemo from "@/components/codeDemo/codeDemo.vue"
 
 @Component({
   name: "yzfInput",
-  components: {}
+  components: {
+    codeDemo
+  }
 })
 export default class YzfInput extends Vue {
 }

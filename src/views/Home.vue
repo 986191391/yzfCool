@@ -9,7 +9,7 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import HomePageIntroduct from "@/components/HomePageIntroduct.vue";
+import HomePageIntroduct from "./HomePageIntroduct.vue";
 import YzfCoolFooter from "@/components/footer/footer.vue";
 
 @Component({

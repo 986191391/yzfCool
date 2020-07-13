@@ -12,6 +12,9 @@
           <router-link to="/Article">Article</router-link>
         </li>
         <li class="nav-item">
+          <router-link to="/MyBro">MyBro</router-link>
+        </li>
+        <li class="nav-item">
           <router-link to="/AboutMe">AboutMe</router-link>
         </li>
       </ul>
@@ -87,7 +90,7 @@ export default class Header extends Vue {
       list-style: none;
 
       .nav-item {
-        width: 25%;
+        width: 20%;
         color: #888;
         text-align: center;
         cursor: pointer;
