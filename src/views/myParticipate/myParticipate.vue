@@ -26,12 +26,11 @@ import { Component, Vue } from "vue-property-decorator";
 })
 export default class MyParticipate extends Vue {
   private goIntroduction() {
-    this.$router.push({ name: "Introduction" })
+    this.$router.push({ name: "Introduction" });
   }
 
   private goYzfInput() {
-    this.$router.push({ name: "YzfInput" })
-    
+    this.$router.push({ name: "YzfInput" });
   }
 }
 </script>
@@ -103,7 +102,6 @@ export default class MyParticipate extends Vue {
 }
 
 @media screen and (max-width: 720px) {
-
   .my-participate {
     width: 100%;
     min-width: 100%;
@@ -111,7 +109,7 @@ export default class MyParticipate extends Vue {
 
     .nav {
       width: 100%;
-      
+
       ul {
         padding: 20px 40px;
       }

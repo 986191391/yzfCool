@@ -1,9 +1,8 @@
 <template>
   <div id="app">
-    <div
-      class="showWindow"
-      :class="showNumber < 0 ? 'hideWindow' : ''"
-    >{{ showFontData[showNumber] }}</div>
+    <div class="showWindow" :class="showNumber < 0 ? 'hideWindow' : ''">
+      {{ showFontData[showNumber] }}
+    </div>
     <yzf-header />
     <div class="main-content">
       <router-view />
@@ -17,7 +16,7 @@ import Header from "@/components/header/header.vue";
 
 @Component({
   components: {
-    "yzf-header": Header,
+    "yzf-header": Header
   }
 })
 export default class VeloSearch extends Vue {
@@ -44,13 +43,12 @@ export default class VeloSearch extends Vue {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: PingFangSC-Regular,PingFang SC;
-  
+  font-family: PingFangSC-Regular, PingFang SC;
 }
 
 a {
   text-decoration: none;
-  word-wrap:break-word;
+  word-wrap: break-word;
 }
 
 #app {
@@ -93,7 +91,6 @@ a {
   overflow: auto;
   align-items: center;
 }
-
 
 @media screen and (max-width: 720px) {
   #app {

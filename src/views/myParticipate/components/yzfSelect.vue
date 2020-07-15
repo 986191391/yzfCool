@@ -11,12 +11,10 @@ import { Component, Vue } from "vue-property-decorator";
   name: "YzfSelect",
   components: {}
 })
-export default class YzfSelect extends Vue {
-}
+export default class YzfSelect extends Vue {}
 </script>
 
 <style lang="less" scoped>
-    .yzf-select {
-        
-    }
+.yzf-select {
+}
 </style>

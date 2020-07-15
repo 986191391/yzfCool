@@ -14,7 +14,7 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import codeDemo from "@/components/codeDemo/codeDemo.vue"
+import codeDemo from "@/components/codeDemo/codeDemo.vue";
 
 @Component({
   name: "yzfInput",
@@ -22,27 +22,24 @@ import codeDemo from "@/components/codeDemo/codeDemo.vue"
     codeDemo
   }
 })
-export default class YzfInput extends Vue {
-}
+export default class YzfInput extends Vue {}
 </script>
 
 <style lang="less" scoped>
-    .yzf-input {
-      text-align: left;
+.yzf-input {
+  text-align: left;
 
-      .main-title {
-        font-weight: 400;
-        color: #1f2f3d;
-        font-size: 28px;
-      }
+  .main-title {
+    font-weight: 400;
+    color: #1f2f3d;
+    font-size: 28px;
+  }
 
-      .description {
-        font-size: 14px;
-        color: #5e6d82;
-        margin: 20px 0 10px;
-        line-height: 23px;
-      }
-
-        
-    }
+  .description {
+    font-size: 14px;
+    color: #5e6d82;
+    margin: 20px 0 10px;
+    line-height: 23px;
+  }
+}
 </style>

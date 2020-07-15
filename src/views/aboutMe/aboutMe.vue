@@ -14,6 +14,5 @@ export default class AboutMe extends Vue {}
 
 <style lang="less" scoped>
 .about-me {
-    
 }
 </style>

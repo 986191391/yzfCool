@@ -29,52 +29,52 @@ const routes: Array<RouteConfig> = [
         path: "/participate/introduction",
         name: "Introduction",
         component: Introduction,
-        props: true,
+        props: true
       },
       {
         path: "/participate/yzfInput",
         name: "YzfInput",
         component: YzfInput,
-        props: true,
+        props: true
       },
       {
         path: "/participate/yzfSelect",
         name: "YzfSelect",
         component: YzfSelect,
-        props: true,
+        props: true
       },
       {
         path: "/participate/yzfSearch",
         name: "YzfSearch",
         component: YzfSearch,
-        props: true,
-      },
-    ],
+        props: true
+      }
+    ]
   },
   {
     path: "/article",
     name: "Article",
     component: Article,
-    props: true,
+    props: true
   },
   {
     path: "/myBro",
     name: "MyBro",
     component: MyBro,
-    props: true,
+    props: true
   },
   {
     path: "/aboutme",
     name: "AboutMe",
     component: AboutMe,
-    props: true,
-  },
+    props: true
+  }
 ];
 
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
-  routes,
+  routes
 });
 
 export default router;

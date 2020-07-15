@@ -11,12 +11,10 @@ import { Component, Vue } from "vue-property-decorator";
   name: "yzfSearch",
   components: {}
 })
-export default class YzfSearch extends Vue {
-}
+export default class YzfSearch extends Vue {}
 </script>
 
 <style lang="less" scoped>
-    .yzf-search {
-        
-    }
+.yzf-search {
+}
 </style>

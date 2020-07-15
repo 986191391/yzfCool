@@ -12,13 +12,17 @@
       <li class="item">
         <img src="../assets/component.png" class="item-img" />
         <h3 class="item-title">组件</h3>
-        <div class="item-content">我将会在此记录我在工作过程中参与制作过的组件，或是自己无聊开发的个人新鲜玩意，欢迎大家评论吐槽哈</div>
+        <div class="item-content">
+          我将会在此记录我在工作过程中参与制作过的组件，或是自己无聊开发的个人新鲜玩意，欢迎大家评论吐槽哈
+        </div>
         <div class="item-more" @click="goParticipate">查看详情</div>
       </li>
       <li class="item">
         <img src="../assets/article.png" class="item-img" />
         <h3 class="item-title">文章</h3>
-        <div class="item-content">遇到问题总结回顾记录是一个程序员必备的技能，温故知新，这样才能推动着自己往前进步，欢迎大家阅览</div>
+        <div class="item-content">
+          遇到问题总结回顾记录是一个程序员必备的技能，温故知新，这样才能推动着自己往前进步，欢迎大家阅览
+        </div>
         <div class="item-more" @click="goArticle">查看详情</div>
       </li>
     </ul>
@@ -33,11 +37,11 @@ export default class HelloWorld extends Vue {
   @Prop() private msg!: string;
 
   private goParticipate() {
-    this.$router.push('/participate/introduction');
+    this.$router.push("/participate/introduction");
   }
 
   private goArticle() {
-    this.$router.push('Article');
+    this.$router.push("Article");
   }
 }
 </script>
@@ -150,5 +154,4 @@ a {
     }
   }
 }
-
 </style>

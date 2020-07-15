@@ -14,6 +14,5 @@ export default class Article extends Vue {}
 
 <style lang="less" scoped>
 .article {
-    
 }
 </style>

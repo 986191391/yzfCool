@@ -13,7 +13,7 @@ import HomePageIntroduct from "./HomePageIntroduct.vue";
 import YzfCoolFooter from "@/components/footer/footer.vue";
 
 @Component({
-  name: 'home',
+  name: "home",
   components: {
     "home-page-introduct": HomePageIntroduct,
     "yzf-cool-footer": YzfCoolFooter
@@ -36,7 +36,7 @@ export default class Home extends Vue {
   .home-img {
     height: 496px;
     width: 800px;
-    background: url('../assets/zrn.jpeg') no-repeat center;
+    background: url("../assets/zrn.jpeg") no-repeat center;
     background-size: contain;
   }
 }
@@ -46,7 +46,7 @@ export default class Home extends Vue {
     .home-img {
       height: 200px;
       width: 100%;
-      background: url('../assets/zrn.jpeg') no-repeat center;
+      background: url("../assets/zrn.jpeg") no-repeat center;
       background-size: contain;
     }
   }

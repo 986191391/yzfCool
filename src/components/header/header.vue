@@ -21,7 +21,12 @@
       <span class="phone-adapter" @click="showDropdown">=</span>
       <div class="phone-dropdown" :class="isShowDropdown && 'showDropdown'">
         <ul class="nav-dropdown">
-          <li class="nav-dropdown-item" @click="go('/participate/introduction')">Participate</li>
+          <li
+            class="nav-dropdown-item"
+            @click="go('/participate/introduction')"
+          >
+            Participate
+          </li>
           <li class="nav-dropdown-item" @click="go('/Article')">Article</li>
           <li class="nav-dropdown-item" @click="go('/AboutMe')">AboutMe</li>
         </ul>
@@ -39,14 +44,14 @@ import { Component, Vue } from "vue-property-decorator";
 })
 export default class Header extends Vue {
   private goDefault() {
-    this.$router.push('/');
+    this.$router.push("/");
   }
 
   private isShowDropdown = false;
 
   private showDropdown() {
     this.isShowDropdown = this.isShowDropdown ? false : true;
-    console.log('hi', this.isShowDropdown);
+    console.log("hi", this.isShowDropdown);
   }
 
   private go(path: string) {
@@ -157,7 +162,6 @@ export default class Header extends Vue {
       .phone-adapter {
         display: block;
       }
-      
     }
   }
 }
