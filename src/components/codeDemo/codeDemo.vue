@@ -3,7 +3,11 @@
     <div class="code-demo-show">
       <slot />
     </div>
-    <div class="demo-code" :style="codeWrapperHeight"></div>
+    <div class="demo-code" :style="codeWrapperHeight">
+      <pre>
+        <code>{{ code }}</code>
+      </pre>
+    </div>
     <div class="code-demo-footer" @click="showCode">
       <div class="footer-font-wrapper">
         <i :class="isCodeShow ? 'el-icon-caret-top' : 'el-icon-caret-bottom'" />
@@ -24,9 +28,13 @@ export default class CodeDemo extends Vue {
   @Prop({ default: "" })
   private codeHeight!: string;
 
+  @Prop({ default: "" })
+  private code!: string;
+
   private get codeWrapperHeight() {
     return this.isCodeShow ? `height: ${this.codeHeight}px` : "height: 0px";
   }
+
 
   private isCodeShow = false;
 
@@ -52,8 +60,16 @@ export default class CodeDemo extends Vue {
   }
 
   .demo-code {
+    font-size: 14px;
+    color: #333;
     height: 0px;
+    border-top: 1px solid #ddd;
+    overflow: hidden;
     transition: all 0.5s;
+
+    pre {
+      padding: 24px;
+    }
   }
 
   .code-demo-footer {
@@ -62,6 +78,7 @@ export default class CodeDemo extends Vue {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: -1px;
     font-size: 12px;
     border-top: 1px solid #ddd;
     transition: all 1s;

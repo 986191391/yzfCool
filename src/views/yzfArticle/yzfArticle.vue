@@ -6,10 +6,10 @@
 import { Component, Vue } from "vue-property-decorator";
 
 @Component({
-  name: "article",
+  name: "yzfArticle",
   components: {}
 })
-export default class Article extends Vue {}
+export default class YzfArticle extends Vue {}
 </script>
 
 <style lang="less" scoped>

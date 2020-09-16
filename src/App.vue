@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="showWindow" :class="showNumber < 0 ? 'hideWindow' : ''">
+    <div class="showWindow" :class="showNumber < 0 && 'hideWindow'">
       {{ showFontData[showNumber] }}
     </div>
     <yzf-header />
@@ -12,11 +12,11 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import Header from "@/components/header/header.vue";
+import yzfHeader from "@/components/yzfHeader/yzfHeader.vue";
 
 @Component({
   components: {
-    "yzf-header": Header
+    "yzf-header": yzfHeader
   }
 })
 export default class VeloSearch extends Vue {
@@ -39,6 +39,9 @@ export default class VeloSearch extends Vue {
 </script>
 
 <style lang="less">
+@import './globalCss/color.less';
+@import './globalCss/input.less';
+
 * {
   margin: 0;
   padding: 0;

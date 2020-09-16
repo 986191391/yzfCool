@@ -1,0 +1,152 @@
+@import url(./color.less);
+
+.el-input{
+  display: flex;
+  justify-content: center;
+
+  .el-input__inner {
+    // 默认高度30px 如有需要穿透进入修改
+    height: 30px;
+    border-radius: 2px;  
+    padding: 0 10px;
+    color: #000;
+    border:1px solid @border-default-color;
+    background-color: #fff;
+    font-size: 12px;
+
+    &::placeholder {
+      color: @input-placeholder-color;
+    }
+
+    &:hover {
+      border: 1px solid @border-hover-color;
+    }
+
+    &:focus {
+      border: 1px solid @color-primary;
+    }
+  }
+
+  &.is-disabled {
+    .el-input__inner {
+      background-color: @color-plain;
+      border-color: @border-default-color;
+      color: #000;
+    }
+  }
+}
+
+// 如果当前输入框存在icon才会有右侧缩进
+.el-input--suffix {
+  // 如果是密码框则一直右侧padding30px
+  [placeholder = '请输入密码'] {
+    padding: 0 30px 0 10px;
+  }
+
+  // hover和foucs时右侧padding30px
+  &:hover {
+    // 非禁用且非独子时（即不存在suffix的icon）
+    .el-input__inner:not([disabled='disabled']):not(:only-child) {
+      padding: 0 30px 0 10px;
+    }
+  }
+
+  .el-input__inner {
+    &:focus {
+      padding: 0 30px 0 10px;
+    }
+  }
+
+  [type = text] + .el-input__suffix{ 
+    .el-input__suffix-inner {
+      .el-icon-view::before {
+        font-family: 'iconfont';
+        content: '\e66f';
+      }
+    }
+  }
+
+  /* 鼠标悬停输入框时右侧的icon */
+  .el-input__suffix {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0s;
+    height: 25px;
+    top: calc( (100% - 25px)/ 2 );
+
+    .el-input__suffix-inner {
+      // 修改清空按钮的图标
+      .el-icon-circle-close::before{
+        content: '\E79D';
+      } 
+
+      .el-icon-view::before {
+        font-family: 'iconfont';
+        content: '\e65a';
+      }
+
+      .el-input__icon{
+        color: @icon-default-color;
+
+        &:hover {
+          color: @icon-hover-color;
+        }
+      }
+    }
+  }
+}
+
+// 45px高度的按钮
+.el-input.el-input--medium{ 
+  .el-input__inner {
+    height: 45px;
+    font-size: 14px;
+  }
+
+  .el-input__suffix {
+    height: 42px;
+    top: calc( (100% - 42px)/ 2 );
+
+    .el-input__suffix-inner{
+      .el-input__icon {
+        color: @icon-default-color;
+
+        &:hover {
+          color: @icon-hover-color;
+        }
+      }
+    }
+  }
+}
+
+// 后面的图标
+.el-input-group__append {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  border: 1px solid @border-default-color;
+  box-sizing: border-box;
+  border-left-width: 0px;
+  padding: 0;
+  background-color: #fff;
+  border-radius: 0 2px 2px 0;
+  cursor: pointer;
+
+  .iconfont {
+    height: 16px;
+    font-size: 16px;
+    line-height: 16px;
+    color: @icon-default-color;
+  }
+
+  &:hover {
+    background-color: @color-plain;
+
+    .iconfont {
+      color: @icon-hover-color;
+    }
+  }
+}

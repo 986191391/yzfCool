@@ -2,7 +2,7 @@ import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
 import Home from "../views/Home.vue";
 import Participate from "../views/myParticipate/myParticipate.vue";
-import Article from "../views/article/article.vue";
+import YzfArticle from "../views/yzfArticle/yzfArticle.vue";
 import MyBro from "../views/myBro/myBro.vue";
 import AboutMe from "../views/aboutMe/aboutMe.vue";
 import Introduction from "../views/myParticipate/introduction/introduction.vue";
@@ -53,8 +53,8 @@ const routes: Array<RouteConfig> = [
   },
   {
     path: "/article",
-    name: "Article",
-    component: Article,
+    name: "YzfArticle",
+    component: YzfArticle,
     props: true
   },
   {

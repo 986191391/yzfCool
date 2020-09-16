@@ -10,7 +10,7 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 import HomePageIntroduct from "./HomePageIntroduct.vue";
-import YzfCoolFooter from "@/components/footer/footer.vue";
+import YzfCoolFooter from "@/components/yzfFooter/yzfFooter.vue";
 
 @Component({
   name: "home",

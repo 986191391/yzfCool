@@ -39,10 +39,10 @@
 import { Component, Vue } from "vue-property-decorator";
 
 @Component({
-  name: "header",
+  name: "yzfHeader",
   components: {}
 })
-export default class Header extends Vue {
+export default class YzfHeader extends Vue {
   private goDefault() {
     this.$router.push("/");
   }

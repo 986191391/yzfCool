@@ -16,10 +16,10 @@
 import { Component, Vue } from "vue-property-decorator";
 
 @Component({
-  name: "footer",
+  name: "yzfFooter",
   components: {}
 })
-export default class Footer extends Vue {}
+export default class YzfFooter extends Vue {}
 </script>
 
 <style lang="less" scoped>
